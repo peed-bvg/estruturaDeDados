@@ -1,13 +1,25 @@
 #include <stdio.h>
+<<<<<<< HEAD
 #include <C:\Users\anton\OneDrive\Documentos\GitHub\estruturaDeDados-1\aulaVetores\bibliotecaVetores.h>
+=======
+#include <C:\Users\Isaac\OneDrive - IFCE\Documentos\Disciplinas\PEED\estruturaDeDados\estruturaDeDados\aulaVetores\bibliotecaVetores.h>
+>>>>>>> 690a6b7fb6b3c59c555b8ed7cad8dcfbb9e12117
 
 /// @brief Função que realiza a travessia do vetor, imprimindo cada uma de seus elementos e o tamanho do vetor.
 /// @param vetor 
 /// @param tamanhoAtualVetor 
 void travessiaVetor(int vetor[], int tamanhoAtualVetor){
+<<<<<<< HEAD
     for(int i = 0; i <= tamanhoAtualVetor; i++){
         printf(vetor[tamanhoAtualVetor]);
     }
+=======
+
+    for(int i = 0; i<tamanhoAtualVetor;i++){
+        printf("%d ", vetor[i]);
+    }
+
+>>>>>>> 690a6b7fb6b3c59c555b8ed7cad8dcfbb9e12117
 }
 
 /// @brief Função que executa uma busca linear dentro de um vetor
