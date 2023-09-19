@@ -1,14 +1,10 @@
 #include <stdio.h>
-#include <C:\Users\Isaac\OneDrive - IFCE\Documentos\Disciplinas\PEED\estruturaDeDados\estruturaDeDados\aulaVetores\bibliotecaVetores.h>
+#include <caminho_para_arquivo\bibliotecaVetoree.h>
 
 /// @brief Função que realiza a travessia do vetor, imprimindo cada uma de seus elementos e o tamanho do vetor.
 /// @param vetor 
 /// @param tamanhoAtualVetor 
 void travessiaVetor(int vetor[], int tamanhoAtualVetor){
-
-    for(int i = 0; i<tamanhoAtualVetor;i++){
-        printf("%d ", vetor[i]);
-    }
 
 }
 
