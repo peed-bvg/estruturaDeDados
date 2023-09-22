@@ -1,25 +1,13 @@
 #include <stdio.h>
-<<<<<<< HEAD
 #include <C:\Users\anton\OneDrive\Documentos\GitHub\estruturaDeDados-1\aulaVetores\bibliotecaVetores.h>
-=======
-#include <C:\Users\Isaac\OneDrive - IFCE\Documentos\Disciplinas\PEED\estruturaDeDados\estruturaDeDados\aulaVetores\bibliotecaVetores.h>
->>>>>>> 690a6b7fb6b3c59c555b8ed7cad8dcfbb9e12117
 
 /// @brief Função que realiza a travessia do vetor, imprimindo cada uma de seus elementos e o tamanho do vetor.
 /// @param vetor 
 /// @param tamanhoAtualVetor 
 void travessiaVetor(int vetor[], int tamanhoAtualVetor){
-<<<<<<< HEAD
     for(int i = 0; i <= tamanhoAtualVetor; i++){
         printf(vetor[tamanhoAtualVetor]);
     }
-=======
-
-    for(int i = 0; i<tamanhoAtualVetor;i++){
-        printf("%d ", vetor[i]);
-    }
-
->>>>>>> 690a6b7fb6b3c59c555b8ed7cad8dcfbb9e12117
 }
 
 /// @brief Função que executa uma busca linear dentro de um vetor
@@ -30,7 +18,7 @@ void travessiaVetor(int vetor[], int tamanhoAtualVetor){
 int buscaElemento(int vetor[], int tamanhoAtualVetor, int valorElemento){
     for(int i = 0; i <= tamanhoAtualVetor; i++){
         if(valorElemento == vetor[i]){
-            printf(vetor[i]);
+            printf(i);
             return 0;
         }else{
             return -1;
@@ -44,10 +32,23 @@ int buscaElemento(int vetor[], int tamanhoAtualVetor, int valorElemento){
 /// @param valorElemento 
 /// @param posicaoInsercao 
 void insereElemento(int vetor[], int tamanhoAtualVetor, int valorElemento, int posicaoInsercao){
-    for(int i = 0; i <= tamanhoAtualVetor; i++){
-        if(posicaoInsercao == i){
-            vetor[i] = valorElemento;
+    int parte1Vetor[posicaoInsercao];
+    int parte2Vetor[tamanhoAtualVetor - posicaoInsercao];
+    int novoVetor[tamanhoAtualVetor + 1];
+    for(int i = 0; i <= posicaoInsercao - 1; i++){
+        parte1Vetor[i] = vetor[i];
+        if(i == posicaoInsercao - 1){
+            parte1Vetor[i + 1] = valorElemento;
         }
+    }
+    for(int i = posicaoInsercao; i <= tamanhoAtualVetor; i++){
+        parte2Vetor[i] = vetor[i];
+    }
+    for(int i = 0; i <= posicaoInsercao; i++){
+        novoVetor[i] = parte1Vetor[i];
+    }
+    for(int i = posicaoInsercao + 1; i <= tamanhoAtualVetor + 1; i++){
+        novoVetor[i] = parte2Vetor[i];
     }
 
 }
@@ -58,9 +59,12 @@ void insereElemento(int vetor[], int tamanhoAtualVetor, int valorElemento, int p
 /// @param valorElemento 
 /// @return Retorna o tamanho atual do vetor
 int excluirElemento(int vetor[], int tamanhoAtualVetor, int valorElemento){
+    int indiceValor = 0;
     for(int i = 0; i <= tamanhoAtualVetor; i++){
         if(valorElemento == vetor[i]){
-            printf(vetor[i]);
+            i += 1;
         }
+        vetor[indiceValor] = vetor[i];
+        indiceValor += 1;
     }
 }
