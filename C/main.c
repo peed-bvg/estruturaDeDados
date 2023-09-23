@@ -10,6 +10,7 @@ int main()
     int posicao;
     int newTam = TAM;
 
+//Loop para intereção com o vetor com as funções: Travassia, Buscra Elemento, Excluir Elemento e Buscar Elemento do vetor
     do{
         printf("Digite a opção desejada:\n1 - Travessia do vetor\n2 - Inserir elemento no vetor\n3 - Buscar elemento no vetor\n4 - Excluir elemento do vetor\n5 - Sair\n");
         scanf("%d", &opcao);
@@ -49,7 +50,6 @@ int main()
                 printf("\nOpção inválida!\n\n");
         }
     } while (opcao != 5);
-
 
     return 0;
 }

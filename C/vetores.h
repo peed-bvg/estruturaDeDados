@@ -38,7 +38,7 @@ void buscarElemento(int array[], int tamanhoArray, int elemento)
             index = contador;
         }
     }
-
+// Verifica se o elemento foi encontrado
     if (verifcador)
     {
         printf("\nElemento %d, encontrado na posição %d.\n\n", elemento, index);
@@ -63,7 +63,7 @@ void excluirElemento(int array[], int tamanhoArray, int elemento)
             verificador = 1;
         }
     }
-
+// Verifica se o elemento a ser excluido existe no vetor
     if(verificador)
     {
         for (int contador = index; contador < tamanhoArray - 1; contador++)
