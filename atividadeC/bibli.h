@@ -6,9 +6,9 @@ void travessiaVetor(int vetor[], int tamanhoDoArray){
     printf("\n Realizando a travessia: ");
 
     for(int i = 0; i < tamanhoDoArray; i++){
-        printf("%d", vetor[i]);
+        printf("%d \t", vetor[i]);
     }
-    printf("/n")
+    printf("\n");
 };
 
 //Função para buscar um elemento
@@ -33,7 +33,7 @@ void insereElemento(int vetor[], int tamanhoDoArray, int valorInserido, int posi
     if(posicao != 0 && posicao <= tamanhoDoArray){
         vetor[posicao] = valorInserido;
         printf("Elemento %d inserido com sucesso no array na posicao %d", valorInserido, posicao);
-    } else if {
+    } else {
         printf("Posição não encontrada!!");
     }
 };
@@ -41,6 +41,7 @@ void insereElemento(int vetor[], int tamanhoDoArray, int valorInserido, int posi
 //Função para excluir o elemento
 void excluirElemento(int vetor[], int tamanhoDoArray, int valorInserido){
     int index = 0;
+    int contador = 0;
 
     for(int i = 0; i <= tamanhoDoArray; i++){
         if(valorInserido == vetor[i]){
