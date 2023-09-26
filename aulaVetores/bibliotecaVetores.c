@@ -1,40 +1,128 @@
 #include <stdio.h>
-#include <C:\Users\Isaac\OneDrive - IFCE\Documentos\Disciplinas\PEED\estruturaDeDados\estruturaDeDados\aulaVetores\bibliotecaVetores.h>
 
-/// @brief Função que realiza a travessia do vetor, imprimindo cada uma de seus elementos e o tamanho do vetor.
-/// @param vetor 
-/// @param tamanhoAtualVetor 
-void travessiaVetor(int vetor[], int tamanhoAtualVetor){
+int main() {
+    
+    
+     int Array[] = {1 2, 3, 4, 5};
+     int tamanhoArray = 5; 
 
-    for(int i = 0; i<tamanhoAtualVetor;i++){
-        printf("%d ", vetor[i]);
+       for (int i = 0; i < tamanhoArray; i++) {
+           
+         printf("Elemento %d: %d\n", i, meuArray[i]);
     }
 
+    return 0;
 }
 
-/// @brief Função que executa uma busca linear dentro de um vetor
-/// @param vetor 
-/// @param tamanhoAtualVetor 
-/// @param valorElemento 
-/// @return retorna o indice do primeiro elemento identificado no array ou retorna -1 caso o elemento não esteja presente
-int buscaElemento(int vetor[], int tamanhoAtualVetor, int valorElemento){
+#include <stdio.h>
+#include <stdlib.h>
 
+
+    int main(int argc, char** argv){
+    int vetor[] = {1, 2, 3, 4, 5}, i;
+    int remove_num = 5;
+    int tam = 5;
+    
+        for(i = 0; i < tam; i++)
+  {
+    if(vetor[i] == remove_num){
+        
+        vetor[i] = -1;
+    }
+ }
+ 
+ for(i = 0; i < tam; i++)
+ {
+    if(vetor[i] >= 0)
+    {
+        printf("%d\n", vetor[i]);
+    }
+ }
+   return 0;
 }
 
-/// @brief Funçção que insere um elemento numa posição especifica do vetor
-/// @param vetor 
-/// @param tamanhoAtualVetor 
-/// @param valorElemento 
-/// @param posicaoInsercao 
-void insereElemento(int vetor[], int tamanhoAtualVetor, int valorElemento, int posicaoInsercao){
 
+#include <stdio.h>
+
+int main() {
+    
+    int tamanho;
+    int elemento;
+    int i;
+    int encontrado = 0;
+
+    printf("Digite o tamanho do array: ");
+    scanf("%d", &tamanho);
+
+     int array[tamanho];
+
+    printf("Digite os elementos do array:\n");
+    
+    for (i = 0; i < tamanho; i++) {
+        scanf("%d", &array[i]);
+    }
+
+    printf("Digite o elemento que deseja procurar: ");
+    scanf("%d", &elemento);
+
+    
+    for (i = 0; i < tamanho; i++) {
+        
+        
+        if (array[i] == elemento) {
+            printf("Elemento encontrado na posição %d.\n", i);
+            encontrado = 1;
+            
+            break;
+        }
+    }
+
+    if (!encontrado) {
+        printf("Elemento não encontrado no array.\n");
+    }
+
+    return 0;
 }
 
-/// @brief A função que deleta um elemento de um vetor. Caso o elemento nao seja encontrado não executa nenhum operação no vetor.
-/// @param vetor 
-/// @param tamanhoAtualVetor 
-/// @param valorElemento 
-/// @return Retorna o tamanho atual do vetor
-int excluirElemento(int vetor[], int tamanhoAtualVetor, int valorElemento){
+#include <stdio.h>
 
+int main() {
+    
+    int tamanho;
+    int elemento;
+    int i;
+    int encontrado = 0;
+
+    printf("Digite o tamanho do array: ");
+    scanf("%d", &tamanho);
+
+     int array[tamanho];
+
+    printf("Digite os elementos do array:\n");
+    
+    for (i = 0; i < tamanho; i++) {
+        scanf("%d", &array[i]);
+    }
+
+    printf("Digite o elemento que deseja procurar: ");
+    scanf("%d", &elemento);
+
+    
+    for (i = 0; i < tamanho; i++) {
+        
+        
+        if (array[i] == elemento) {
+            printf("Elemento encontrado na posição %d.\n", i);
+            encontrado = 1;
+            
+            break;
+        }
+    }
+
+    if (!encontrado) {
+        printf("Elemento não encontrado no array.\n");
+    }
+
+    return 0;
 }
+
