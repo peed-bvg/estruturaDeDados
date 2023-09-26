@@ -1,40 +1,59 @@
 #include <stdio.h>
-#include <C:\Users\Isaac\OneDrive - IFCE\Documentos\Disciplinas\PEED\estruturaDeDados\estruturaDeDados\aulaVetores\bibliotecaVetores.h>
+#include </home/ExpeditoFarias/Git/estruturaDeDados/AtividadeVetoress/bibli.h>
 
-/// @brief Função que realiza a travessia do vetor, imprimindo cada uma de seus elementos e o tamanho do vetor.
-/// @param vetor 
-/// @param tamanhoAtualVetor 
-void travessiaVetor(int vetor[], int tamanhoAtualVetor){
+#define TAM 10
 
-    for(int i = 0; i<tamanhoAtualVetor;i++){
-        printf("%d ", vetor[i]);
-    }
+int main() {
+    int vetor[TAM] = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
+    int opcao;
+    int elemento;
+    int posicao;
+    int tamanho = TAM;
 
+    do {
+        printf("--------------------------------------------------------------------------\n");
+        printf("Digite a opção que deseja realizar:\n");
+        printf("1 - Travessia do vetor\n");
+        printf("2 - Inserir elemento no vetor\n");
+        printf("3 - Buscar elemento no vetor\n");
+        printf("4 - Excluir elemento do vetor\n");
+        printf("5 - Sair\n");
+        scanf("%d", &opcao);
+
+        switch (opcao) {
+            case 1:
+                travessiaVetor(vetor, tamanho);
+                break;
+
+            case 2:
+                printf("\nInforme o elemento que deseja inserir no vetor: ");
+                scanf("%d", &elemento);
+                printf("Informe a posição em que deseja inserir o elemento de 0 a %d: ", tamanho - 1);
+                scanf("%d", &posicao);
+                insereElemento(vetor, &tamanho, elemento, posicao);
+                break;
+
+            case 3:
+                printf("\nInforme o valor do elemento que deseja buscar: ");
+                scanf("%d", &elemento);
+                buscaElemento(vetor, tamanho, elemento);
+                break;
+
+            case 4:
+                printf("\nInforme o valor do elemento que deseja excluir: ");
+                scanf("%d", &elemento);
+                excluirElemento(vetor, &tamanho, elemento);
+                break;
+
+            case 5:
+                printf("\nEncerrado\n");
+                break;
+
+            default:
+                printf("\nOpção inválida!\n");
+        }
+    } while (opcao != 5);
+
+    return 0;
 }
 
-/// @brief Função que executa uma busca linear dentro de um vetor
-/// @param vetor 
-/// @param tamanhoAtualVetor 
-/// @param valorElemento 
-/// @return retorna o indice do primeiro elemento identificado no array ou retorna -1 caso o elemento não esteja presente
-int buscaElemento(int vetor[], int tamanhoAtualVetor, int valorElemento){
-
-}
-
-/// @brief Funçção que insere um elemento numa posição especifica do vetor
-/// @param vetor 
-/// @param tamanhoAtualVetor 
-/// @param valorElemento 
-/// @param posicaoInsercao 
-void insereElemento(int vetor[], int tamanhoAtualVetor, int valorElemento, int posicaoInsercao){
-
-}
-
-/// @brief A função que deleta um elemento de um vetor. Caso o elemento nao seja encontrado não executa nenhum operação no vetor.
-/// @param vetor 
-/// @param tamanhoAtualVetor 
-/// @param valorElemento 
-/// @return Retorna o tamanho atual do vetor
-int excluirElemento(int vetor[], int tamanhoAtualVetor, int valorElemento){
-
-}
