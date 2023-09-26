@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include </home/ExpeditoFarias/Git/estruturaDeDados/AtividadeVetoress/bibli.h>
+#include </home/ExpeditoFarias/Git/estruturaDeDados/aulaVetores/bibli.h>
 
 #define TAM 10
 
