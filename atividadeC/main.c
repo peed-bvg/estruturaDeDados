@@ -9,8 +9,8 @@ int main(){
     int tamanho = TAM;
 
      do{
-        printf("-------------------------------------------------------------------\n");
-        printf("Digite a opção que desejará realizar:\n1 - Travessia do vetor\n2 - Inserir elemento no vetor\n3 - Buscar elemento no vetor\n4 - Excluir elemento do vetor\n5 - Sair\n");
+        printf("\n \n-------------------------------------------------------------------\n");
+        printf("Digite a opcao que desejara realizar:\n1 - Travessia do vetor\n2 - Inserir elemento no vetor\n3 - Buscar elemento no vetor\n4 - Excluir elemento do vetor\n5 - Sair\n");
         scanf("%d", &opcao);
 
         switch(opcao)
@@ -22,14 +22,12 @@ int main(){
             case 2:
                 printf("\nInforme o elemento que deseja inserir no vetor: ");
                 scanf("%d", &elemento);
-                printf("Informe a posição em que deseja inserir o elemento de 0 a %d: ", tamanho - 1);
+                printf("Informe a posicao em que deseja inserir o elemento de 0 a %d: ", tamanho - 1);
                 scanf("%d", &posicao);
                 insereElemento(vetor, tamanho, elemento, posicao);
             break;
 
             case 3:
-                printf("\nInforme o valor do elemento que deseja buscar: ");
-                scanf("%d", &elemento);
                 buscaElemento(vetor, tamanho, elemento);
             break;
 

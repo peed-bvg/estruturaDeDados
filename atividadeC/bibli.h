@@ -6,9 +6,9 @@ void travessiaVetor(int vetor[], int tamanhoDoArray){
     printf("\n Realizando a travessia: ");
 
     for(int i = 0; i < tamanhoDoArray; i++){
-        printf("%d \t", vetor[i]);
+        printf("%d -\t-", vetor[i]);
     }
-    printf("\n");
+    printf("\n\n");
 };
 
 //Função para buscar um elemento
@@ -17,13 +17,16 @@ void buscaElemento(int vetor[], int tamanhoDoArray, int valorDoArray){
     printf("Digite o valor do elemento: ");
     scanf("%d", &valorElemento);
 
-    
+    int verifica = 0;
     for(int i = 0; i < tamanhoDoArray; i++){
             if(valorElemento == vetor[i]){
-                printf("Elemento encontrado na posição %d", i);
-            } else if(valorElemento != vetor[i]){
-                printf("Elemento não encontrado");
-            }
+                printf("Elemento encontrado na posição %d \t", i);
+                verifica = 1;
+            } 
+    } 
+    //Verifica fora da estrutura for para evitar que o "Elemento não foi encontrado!" não se repita várias vezes. 
+    if(!verifica){
+        printf("Elemento não foi encontrado!");
     }
 };
 
