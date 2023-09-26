@@ -1,13 +1,16 @@
 #include <stdio.h>
+#include </home/lukemew/Git/estruturaDeDados/atividadeC/bibli.h>
+#define TAM 10
 int main(){
        int vetor[TAM] = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
     int opcao;
     int elemento;
     int posicao;
     int tamanho = TAM;
+
      do{
         printf("--------------------------------------------------------------------------\n");
-        printf("Digite a opção desejada:\n1 - Travessia do vetor\n2 - Inserir elemento no vetor\n3 - Buscar elemento no vetor\n4 - Excluir elemento do vetor\n5 - Sair\n");
+        printf("Digite a opção que desejará realizar:\n1 - Travessia do vetor\n2 - Inserir elemento no vetor\n3 - Buscar elemento no vetor\n4 - Excluir elemento do vetor\n5 - Sair\n");
         scanf("%d", &opcao);
 
         switch(opcao)
@@ -38,11 +41,11 @@ int main(){
             break;
 
             case 5:
-                printf("\nEncerrado\n\n");
+                printf("\nEncerrado\n");
             break;
 
             default:
-                printf("\nOpção inválida!\n\n");
+                printf("\nOpção inválida!\n");
         }
     } while (opcao != 5);
 
