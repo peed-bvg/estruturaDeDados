@@ -1,0 +1,79 @@
+#include <stdio.h>
+#define MAX_SIZE 100
+
+typedef struct {
+    int data[MAX_SIZE];
+    int size;
+} Vector;
+
+void initialize(Vector *vec) {
+    vec->size = 0;
+}
+
+
+void traverse(const Vector *vec) {
+    printf("Elementos do vetor: ");
+    for (int i = 0; i < vec->size; i++) {
+        printf("%d ", vec->data[i]);
+    }
+    printf("\n");
+}
+
+void insert(Vector *vec, int value) {
+    if (vec->size < MAX_SIZE) {
+        vec->data[vec->size] = value;
+        vec->size++;
+        printf("Elemento %d inserido com sucesso.\n", value);
+    } else {
+        printf("Erro: O vetor está cheio, não é possível inserir mais elementos.\n");
+    }
+}
+
+void deleteElement(Vector *vec, int value) {
+    int found = 0;
+    for (int i = 0; i < vec->size; i++) {
+        if (vec->data[i] == value) {
+            for (int j = i; j < vec->size - 1; j++) {
+                vec->data[j] = vec->data[j + 1];
+            }
+            vec->size--;
+            found = 1;
+            printf("Elemento %d excluído com sucesso.\n", value);
+            break;
+        }
+    }
+    if (!found) {
+        printf("Erro: Elemento %d não encontrado no vetor.\n", value);
+    }
+}
+
+int search(const Vector *vec, int value) {
+    for (int i = 0; i < vec->size; i++) {
+        if (vec->data[i] == value) {
+            printf("Elemento %d encontrado na posição %d.\n", value, i);
+            return 1;
+        }
+    }
+    printf("Elemento %d não encontrado no vetor.\n", value);
+    return 0;
+}
+
+int main() {
+    Vector vec;
+    initialize(&vec);
+
+    insert(&vec, 10);
+    insert(&vec, 20);
+    insert(&vec, 30);
+    traverse(&vec);
+
+    search(&vec, 20);
+    search(&vec, 40);
+
+    deleteElement(&vec, 20);
+    traverse(&vec);
+
+    return 0;
+}
+
+
