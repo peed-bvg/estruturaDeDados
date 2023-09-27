@@ -28,14 +28,13 @@ int main(){
             break;
 
             case 3:
-                buscaElemento(vetor, tamanho, elemento);
+                buscaElemento(vetor, tamanho);
             break;
 
             case 4:
                 printf("\nInforme o valor do elemento que deseja excluir: ");
                 scanf("%d", &elemento);
-                excluirElemento(vetor, TAM, elemento);
-                tamanho -= 1;
+                excluirElemento(vetor, tamanho, elemento);
             break;
 
             case 5:

@@ -12,7 +12,7 @@ void travessiaVetor(int vetor[], int tamanhoDoArray){
 };
 
 //Função para buscar um elemento
-void buscaElemento(int vetor[], int tamanhoDoArray, int valorDoArray){
+void buscaElemento(int vetor[], int tamanhoDoArray){
     int valorElemento;
     printf("Digite o valor do elemento: ");
     scanf("%d", &valorElemento);
@@ -46,23 +46,24 @@ void excluirElemento(int vetor[], int tamanhoDoArray, int valorInserido){
     int index = 0;
     int contador = 0;
 
-    for(int i = 0; i <= tamanhoDoArray; i++){
+    for(int i = 0; i < tamanhoDoArray; i++){
         if(valorInserido == vetor[i]){
             index = i;
         }
     } 
 
-    if(index != 0 ){
-        for(int i = index; i < tamanhoDoArray; i++){
-            vetor[contador] = vetor[contador+1];
+    if(index >= 0 ){
+        for(int i = index; i < tamanhoDoArray - 1; i++){
+            vetor[index] = contador;
+
         }
+       
         printf("Elemento %d excluído com sucesso!!", valorInserido);
     }
     else 
     {
         printf("Elemento não encontrado");
     }
-
 };
 
 #endif
