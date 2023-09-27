@@ -33,7 +33,7 @@ int buscaElemento(int vetor[], int tamanhoAtualVetor, int valorElemento){
 /// @param tamanhoAtualVetor 
 /// @param valorElemento 
 /// @param posicaoInsercao 
-void insereElemento(int vetor[], int tamanhoAtualVetor, int valorElemento, int posicaoInsercao){
+void insereElemento(int vetor[], int *tamanhoAtualVetor, int valorElemento, int posicaoInsercao){
 
     if (*tamanhoAtualVetor < 100){
         for (int i = *tamanhoAtualVetor - 1; i >= posicaoInsercao; i--){
@@ -52,7 +52,7 @@ void insereElemento(int vetor[], int tamanhoAtualVetor, int valorElemento, int p
 /// @param tamanhoAtualVetor 
 /// @param valorElemento 
 /// @return Retorna o tamanho atual do vetor
-int excluirElemento(int vetor[], int tamanhoAtualVetor, int valorElemento){
+int excluirElemento(int vetor[], int *tamanhoAtualVetor, int valorElemento){
 
     for (int i = 0; i < *tamanhoAtualVetor; i++) {
         if (vetor[i] == valorElemento) {
