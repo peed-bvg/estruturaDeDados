@@ -3,7 +3,7 @@
 
 void imprimirVetor(int vetor[], int tamanhoAtual);
 int buscarElemento(int vetor[], int tamanhoAtual, int valor);
-void inserirElemento(int vetor[], int *tamanhoAtual, int valor, int posicaoInsercao);
+void implementarElemento(int vetor[], int *tamanhoAtual, int valor, int posicaoInsercao);
 int excluirElemento(int vetor[], int *tamanhoAtual, int valorElemento);
 
 #endif
