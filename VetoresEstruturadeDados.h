@@ -1,5 +1,5 @@
 
-#include <stdio.h>
+#include  <vetoresestruturadedados.h>
 
 int buscaElemento(int vetor[], int *tamanhoAtualVetor, int valorElemento){
 
