@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <bibliotecavetores.h>
 
 // Estrutura do vetor
 typedef struct {
