@@ -6,5 +6,4 @@ int buscaElemento(int vetor[], int tamanhoAtualVetor, int valorElemento);
 void insereElemento(int vetor[], int tamanhoAtualVetor, int valorElemento, int posicaoInsercao);
 int excluirElemento(int vetor[], int tamanhoAtualVetor, int valorElemento);
 
-
 #endif
